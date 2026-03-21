@@ -119,6 +119,100 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupSynchronizedVideoGroups() {
+    const videoGroups = document.querySelectorAll('.sync-video-group');
+
+    if (videoGroups.length === 0) return;
+
+    const syncGroupToLeader = (videos, leader) => {
+        videos.forEach(video => {
+            if (video === leader) return;
+
+            if (Math.abs(video.currentTime - leader.currentTime) > 0.12) {
+                try {
+                    video.currentTime = leader.currentTime;
+                } catch (e) {
+                    // Ignore sync errors while metadata is still loading.
+                }
+            }
+
+            if (video.playbackRate !== leader.playbackRate) {
+                video.playbackRate = leader.playbackRate;
+            }
+        });
+    };
+
+    videoGroups.forEach(group => {
+        const videos = Array.from(group.querySelectorAll('.video-row-item video'));
+
+        if (videos.length === 0) return;
+
+        const leader = videos[0];
+        let isVisible = false;
+
+        const syncFollowers = () => syncGroupToLeader(videos, leader);
+
+        const playGroup = () => {
+            syncFollowers();
+
+            const playPromises = videos.map(video => video.play().catch(() => null));
+            Promise.all(playPromises).catch(() => null);
+        };
+
+        const pauseGroup = () => {
+            videos.forEach(video => video.pause());
+        };
+
+        leader.addEventListener('play', () => {
+            if (!isVisible) return;
+
+            syncFollowers();
+            videos.forEach(video => {
+                if (video !== leader && video.paused) {
+                    video.play().catch(() => null);
+                }
+            });
+        });
+
+        leader.addEventListener('pause', () => {
+            videos.forEach(video => {
+                if (video !== leader) {
+                    video.pause();
+                }
+            });
+        });
+
+        ['seeking', 'seeked', 'ratechange', 'loadedmetadata'].forEach(eventName => {
+            leader.addEventListener(eventName, syncFollowers);
+        });
+
+        leader.addEventListener('timeupdate', syncFollowers);
+
+        videos.forEach(video => {
+            video.muted = true;
+            video.playsInline = true;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.target !== group) return;
+
+                isVisible = entry.isIntersecting;
+
+                if (isVisible) {
+                    playGroup();
+                } else {
+                    pauseGroup();
+                }
+            });
+        }, {
+            threshold: 0.35
+        });
+
+        observer.observe(group);
+    });
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -138,5 +232,8 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    // Setup synchronized autoplay for visible video demo groups
+    setupSynchronizedVideoGroups();
 
 })
