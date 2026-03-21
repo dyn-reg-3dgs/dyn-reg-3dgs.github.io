@@ -335,7 +335,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Abstract: Deformable 3D Gaussian splatting (3DGS) enables the efficient rendering of dynamic scenes which is required by numerous novel 3D applications. However, the deformable field- based approach is object agnostic, which causes inconsistent Gaussian deformation within individual objects and across different objects. To solve this issue, this work proposes to use semantic information to guide the dynamic regularization of objects, with the aim of achieving consistent object-level deformation. First, we extract SAM masks and semantic features of input images and obtain the object-id map through feature relevance calculation with the given object dictionary. With the guide of object-id map, we then extract the pixel-wise max-k contributor Gaussians of each object, and apply consistency regularization on the deformation field of the Gaussians, i.e., position, scaling, and rotation. Experiment results show that the using semantic information to guide deformation regularization can significantly improve the object-level consistency in dynamic 3DGS rendering.
           </p>
         </div>
       </div>
