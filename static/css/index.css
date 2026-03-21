@@ -749,5 +749,29 @@ a:focus {
   }
 }
 
+.video-row {
+  align-items: stretch;
+}
+
+.video-row-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.video-row-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background: #000;
+}
+
+.video-row-item p {
+  margin: 0;
+  text-align: center;
+}
+
 
 

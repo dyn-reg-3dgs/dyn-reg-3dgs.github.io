@@ -241,7 +241,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">SemDynReg: Semantic-Guided Deformation Regularization for Dynamic 3D Gaussian Splatting </h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -312,21 +312,18 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -348,35 +345,180 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
 <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Demo 1</h2>
+
+      <!-- Row 1: Ground Truth centered, same size as others -->
+      <div class="columns is-centered is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/dynamic/render_gt.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Ground Truth</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/dynamic/render_scene.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Rendered Scene</p>
+        </div>
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/dynamic/render_feature.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Rendered Feature</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/dynamic/render_segmented.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Segmented Rendering</p>
+        </div>
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/dynamic/render_obj_2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Dynamic Object Rendering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Demo 2</h2>
+
+      <!-- Row 1: Ground Truth centered, same size as others -->
+      <div class="columns is-centered is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0101/render_gt.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Ground Truth</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0101/render_scene.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Rendered Scene</p>
+        </div>
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0101/render_feature.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Rendered Feature</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0101/render_segmented.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Segmented Rendering</p>
+        </div>
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0101/render_obj_2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Dynamic Object Rendering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Demo 3</h2>
+
+      <!-- Row 1: Ground Truth centered, same size as others -->
+      <div class="columns is-centered is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0314/render_gt.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Ground Truth</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0314/render_scene.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Rendered Scene</p>
+        </div>
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0314/render_feature.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Rendered Feature</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0314/render_segmented.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Segmented Rendering</p>
+        </div>
+        <div class="column is-half-desktop is-half-tablet video-row-item">
+          <video poster="" controls muted loop playsinline preload="metadata">
+            <source src="static/videos/0314/render_obj_2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered mt-2">Dynamic Object Rendering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- TODO: Replace with your research result images -->
         <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
@@ -385,57 +527,49 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+      <h2 class="title is-3">Videos</h2>
+      <div class="columns is-variable is-4 video-row">
+        <div class="column is-one-third-desktop is-half-tablet video-row-item">
+          <video poster="" id="video1" controls muted loop playsinline preload="metadata">
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+        <div class="column is-one-third-desktop is-half-tablet video-row-item">
+          <video poster="" id="video2" controls muted loop playsinline preload="metadata">
             <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+        <div class="column is-one-third-desktop is-half-tablet video-row-item">
+          <video poster="" id="video3" controls muted loop playsinline preload="metadata">
             <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
@@ -443,7 +577,7 @@
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End video row -->
 
 
 
