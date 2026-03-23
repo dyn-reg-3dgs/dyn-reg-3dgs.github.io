@@ -759,7 +759,12 @@ a:focus {
 }
 
 .sync-video-group .container {
-  width: min(100%, 672px);
+  width: min(100%, 1560px);
+  margin: 0 auto;
+}
+
+.abstract-wide-container {
+  width: min(100%, 1560px);
   margin: 0 auto;
 }
 
