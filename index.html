@@ -240,7 +240,7 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Ruitao Chen</a>,</span>
+                <a href="https://www.linkedin.com/in/ruitao-chen-721514170/" target="_blank">Ruitao Chen</a>,</span>
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jinge Li</a>,</span>
                   <span class="author-block">
@@ -340,10 +340,28 @@
 <!-- End paper abstract -->
 
 
+<section class="hero is-small sync-video-group" id="demo">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Demo</h2>
+      <h3 class="title is-4">Scene Description</h3>
+      <div class="content has-text-justified">
+        <p class="is-size-5">
+          We present experimental results across three separate scenes, each containing three cars, including one moving vehicle and two static ones. The cars serve as the primary objects of interest. To distinguish them, we use semantic prompts—<em>“White SUV”</em>, <em>“Green SUV”</em>, and <em>“Yellow sedan”</em>—and match them with extracted semantic features to obtain object identities. The moving car is identified based on the deformation magnitude (scale) of its associated Gaussians. We then apply object-level regularization to enforce more consistent deformation among the Gaussians belonging to that object.
+        </p>
+        <p class="is-size-5">
+          For each scene, we provide comparisons between the <span class="demo-term-highlight">Ground Truth</span> and the <span class="demo-term-highlight">Rendered Scene</span> with dynamic regularization applied. In addition, we train a semantic feature field that enables feature-based rendering, as shown in the <span class="demo-term-highlight">Rendered Feature</span> videos, where the three cars are represented by distinct gray levels. These learned features are further used for object identification and motion extraction, as illustrated in the <span class="demo-term-highlight">Segmented Rendering</span> and <span class="demo-term-highlight">Dynamic Object Rendering</span> videos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="hero is-small sync-video-group">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Video Demo 1</h2>
+      <h3 class="title is-4">Dynamic Scene 1</h3>
 
       <!-- Row 1: Ground Truth centered, same size as others -->
       <div class="columns is-centered is-variable is-2 video-row">
@@ -389,7 +407,7 @@
 <section class="hero is-small sync-video-group">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Video Demo 2</h2>
+      <h3 class="title is-4">Dynamic Scene 2</h3>
 
       <!-- Row 1: Ground Truth centered, same size as others -->
       <div class="columns is-centered is-variable is-2 video-row">
@@ -435,7 +453,7 @@
 <section class="hero is-small sync-video-group">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Video Demo 3</h2>
+      <h3 class="title is-4">Dynamic Scene 3</h3>
 
       <!-- Row 1: Ground Truth centered, same size as others -->
       <div class="columns is-centered is-variable is-2 video-row">
@@ -593,7 +611,7 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+      <pre id="bibtex-code"><code>@article{YourPaperKey2026,
   title={SemDynReg: Semantic-Guided Deformation Regularization for Dynamic 3D Gaussian Splatting},
   author={Ruitao Chen and Jinge Li and Mozhang Guo},
   journal={Conference/Journal Name},

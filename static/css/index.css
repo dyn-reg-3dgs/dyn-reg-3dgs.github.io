@@ -341,6 +341,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.demo-term-highlight {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
 /* Footer Improvements */
 .footer {
   background: var(--background-secondary);
